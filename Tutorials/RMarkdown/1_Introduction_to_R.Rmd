@@ -99,7 +99,9 @@ rivers_numeric_vector <- c(1915,333,6,12)
 rivers_numeric_vector
 ```
 
-In this example, we create a vector of characters and then give it a name. Remember, run the name of the vector by itself to see it.
+**In this example, we create a vector of characters and then give it a name.**
+
+Remember, run the name of the vector by itself to see it.
 
 ```{r characters vectors}
 

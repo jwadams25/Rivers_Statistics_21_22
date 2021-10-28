@@ -5,8 +5,8 @@ Mr. Adams
 -   [Welcome to R and RStudio!](#welcome-to-r-and-rstudio)
 -   [By the end of this tutorial I should be able
     to…](#by-the-end-of-this-tutorial-i-should-be-able-to)
-    -   [1: Describe what a package is and when to run a
-        library](#1-describe-what-a-package-is-and-when-to-run-a-library)
+    -   [1: Describe what a package is and know when to run a
+        library.](#1-describe-what-a-package-is-and-know-when-to-run-a-library)
         -   [1.1: Tasks and Questions](#11-tasks-and-questions)
     -   [2: Use R as a calculator](#2-use-r-as-a-calculator)
         -   [2.1: Tasks and Questions](#21-tasks-and-questions)
@@ -30,7 +30,7 @@ begin to learn how to to explore data using R.
 
 # By the end of this tutorial I should be able to…
 
-## 1: Describe what a package is and when to run a library
+## 1: Describe what a package is and know when to run a library.
 
 If you were to build something, you would need to get some tools and
 organize those tools in various toolboxes. To build a house you’d need a
@@ -147,8 +147,10 @@ rivers_numeric_vector
 
     ## [1] 1915  333    6   12
 
-In this example, we create a vector of characters and then give it a
-name. Remember, run the name of the vector by itself to see it.
+**In this example, we create a vector of characters and then give it a
+name.**
+
+Remember, run the name of the vector by itself to see it.
 
 ``` r
 rivers_character_vector <- c("red", "white", "black", "gray")
