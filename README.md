@@ -9,10 +9,16 @@ This will be the place for you to start. This folder will house examples from wh
 The goal here is to learn by doing!! You can watch videos and read through example code, but it isn't until you start writing, running, and editing code that you will begin to learn. This section will have you diving into datasets to uncover hidden stories. 
 
 ## Projects:
-This will house any documents needed for your to get started on a project.
+This will house any documents needed for you to get started on a project.
 
 ## Practice Area:
 Check out this section to see explorations done in class and extra help sessions.
 
 ## Sources: 
-Online version of Introduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin - https://openintro-ims.netlify.app/index.html#license Data Science in a Box by Mine Çetinkaya-Rundel - https://datasciencebox.org/index.html R for Data Science by Garrett Grolemund and Hadley Wickham - https://r4ds.had.co.nz/ Data Science from HarvardX - https://www.edx.org/professional-certificate/harvardx-data-science
+The Online version of Introduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin - https://openintro-ims.netlify.app/index.html#license 
+
+Data Science in a Box by Mine Çetinkaya-Rundel - https://datasciencebox.org/index.html 
+
+R for Data Science by Garrett Grolemund and Hadley Wickham - https://r4ds.had.co.nz/ 
+
+Data Science from HarvardX - https://www.edx.org/professional-certificate/harvardx-data-science
