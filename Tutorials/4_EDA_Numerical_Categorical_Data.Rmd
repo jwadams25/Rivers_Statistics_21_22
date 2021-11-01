@@ -1,0 +1,36 @@
+---
+title: "4_EDA_Numerical_Categorical_Data"
+author: "Mr. Adams"
+output: 
+  github_document:
+    toc: true
+    toc_depth: 4
+---
+
+# Libraries
+
+
+```{r libraries}
+library(tidyverse)
+library(openintro)
+library(skimr)
+library(gapminder)
+```
+
+# Data
+
+```{r data}
+view(gapminder)
+
+glimpse(gapminder)
+```
+
+# EDA with Numerical and Categorical Data
+
+## Facet
+
+## Ridge
+
+## Box
+
+## Scatter with colors
