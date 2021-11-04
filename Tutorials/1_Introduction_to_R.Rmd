@@ -62,13 +62,13 @@ At its most basic level, R can be used as a calculator. Keep your phone in your 
 
 As you start to explore data, you will have many lines of code that create many statistics and visualizations. Staying organized is important. One way to do that is naming certain chunks of code. When you want to run that code again, you run the name of the code instead of the whole long chunk.
 
-name \<- thing you want to name
+name <- thing you want to name
 
 (Note: That little arrow is made by typing the greater than sign and minus sign on keyboard)
 
 Naming tips:
 
--   use \_ instead of spaces. Example john_adams
+-   use _ instead of spaces. Example john_adams
 -   keep it short yet something that will help you remember what it represents. Ex. grades_hist could be used to name a histogram showing the distributions of grades.
 
 ### 3.1: Tasks and Questions
