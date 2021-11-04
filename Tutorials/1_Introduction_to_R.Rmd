@@ -73,7 +73,7 @@ Naming tips:
 
 ### 3.1: Tasks and Questions
 
-1.  ***Copy one of the calculations you did in 2.0 Tasks and Questions and paste it into the gray section below.***
+1.  ***Copy one of the calculations you did in 2.1 Tasks and Questions and paste it into the gray section below.***
 
 2.  ***Give your calculations a name and add the arrow.***
 
