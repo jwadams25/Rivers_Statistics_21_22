@@ -66,7 +66,7 @@ glimpse(loan50)
 
 Are you confused? I certainly would be! Before diving into any exploration, you need to first be sure you understand the data
 
-3. Click this link https://www.openintro.org/data/index.php?data=loan50 to learn more about this dataset?
+3. Click this link https://www.openintro.org/data/index.php?data=loan50 to learn more about this dataset.
 
 For the next three questions, use information from the link you just read and the code your ran in questions 1 and 2.
 
@@ -80,7 +80,7 @@ For the next three questions, use information from the link you just read and th
 
 8. How many variables are there?
 
-For the rest of this tutorial, you will work with Let's start by selecting a few of these variables.
+***For the rest of this tutorial, you will work with a smaller version of this data set. We'll keep the 50 rows, but select 7 of the 18 varaibles we started with. The code below makes this new data frame.***
 
 ```{r select variables}
 loan50_small <- loan50 %>%
@@ -90,6 +90,8 @@ loan50_small <- loan50 %>%
 ```
 
 ### 2.2: Tasks and Questions
+
+(before doing this section, be sure you've run the code chunk above)
 
 1. What is the name of the new data frame created in the lines of code above? Type the name EXACTLY how it appears above. Hint: Copying and pasting is your friend!
 
@@ -126,9 +128,9 @@ loan50_small %>%
 
 ### 3.1: Tasks and Questions
 
-1.  What question could be explored with the visualization created by the code above?
+1.  Run the code above.
 
-2.  Run the code above.
+2.  What question could be explored with the visualization created by the code above?
 
 3.  Describe the shape of the distribution.
 
@@ -160,7 +162,8 @@ NAME_OF_DATA_FRAME %>%
 
 2. If you are about to change your visualization from a histogram to a density curve, will you need to change the variable listed on the x-axis?
 
-3.In the code below, change geom_histogram() to geom_density()
+3.In the code below, change geom_histogram() to geom_density() and then run the entire code chuck. 
+
 
 ```{r your first density curve}
 
@@ -263,7 +266,7 @@ loan50_small %>%
 
 ### 6.3: Adjusting Scales
 
-You may also want to adjust the scales. In the case above, you see the x-axis goes from
+You may also want to adjust the scales on the x and y axes.
 
 Be careful when adjusting scales!! Do not distort the story being told! Whole books are written about topics like this so we'll talk more about this as we continue to build visualizations.
 
@@ -271,34 +274,28 @@ A good general rule, keep it simple!
 
 #### 6.3: Tasks and Questions
 
-1. Without running the code below, what type of visualization will it create?
+1. Copy the code used to generate the histogram in 6.2 Tasks and Questions #5 and paste it into the gray space below. 
 
-2. What variable is on the x-axis?
+2. When you have a continuous variable on the x-axis, you can use the following to adjust the scale:
 
-3. Did I choose the same bin width as you did in 6.2?
+  scale_x_continuous(limits = c(min, max), breaks = seq(c(min, max, ticks)))
+  
+  Edit the words min, max, and ticks in the code you see in the previous line. 
+  min = minimum value for x-axis
+  max = maximum value for x-axis
+  ticks = where you want the markings along the x-axis. 
+  
+3. Put a + at the end of the code you pasted into the section below and then jump to the next line. 
 
-4. Run the chunk of code. (Note: Before you ask me a question read the next task)
-
-5. "Hey, Mr. Adams! This code doesn't work!" Indeed it doesn't. Which part of the code did it reference in the Error message?
-
-6. Adjust the section of the code referenced in the error message (Hint: Look back at the histogram from 6b to get a sense of what scale you want to put on the x-axis.)
+4. Paste the scale_x_continuous code you adjusted into the last row of the code chunk below. 
 
 ```{r adjust scales}
-loan50_small %>%
-  ggplot(aes(x = loan_amount)) +
-  geom_histogram(binwidth = 2500) +
-  labs(
-    title ="Distribution of Loan Amounts",
-    subtitle = "50 randomly selected loans from Lending Club",
-    x = "Loan Amount in Dollars",
-    y = "Number of Loans"
-  ) +
-  scale_x_continuous(limits = c(min, max), breaks = seq(c(min, max, ticks)))
+
 ```
 
 ### 6.4: Clean Up
 
-Alright, you have done a lot to improve the orginial histogram that appeared! Let's keep getting your visualization ready for prime time!
+Alright, you have done a lot to improve the original histogram that appeared! Let's keep getting your visualization ready for prime time!
 
 Removing clutter is often a wise choice when designing a visualization. That is what you will do now.
 
@@ -306,7 +303,7 @@ Removing clutter is often a wise choice when designing a visualization. That is 
 
 1. Copy and past the code from 6.3 into the gray space below.
 
-2. At the end of the line with scale_x\_continuous put a +
+2. At the end of the line with scale_x_continuous put a +
 
 3. On the next line write in theme_minimal() and then run the entire chunk of code.
 
