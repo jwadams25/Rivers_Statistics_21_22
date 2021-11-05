@@ -215,7 +215,7 @@ immigration %>%
 
 The question you answered on one of your homework assignments was, "Do political ideology and views on immigration appear to be associated?"
 
-Answering that question requires you to explore two categorical variables. This part of the tutorial will walk you through building contingency tables and filled bar plot 
+Answering that question requires you to explore two categorical variables. This part of the tutorial will walk you through building contingency tables and filled bar plots. 
 
 ## 2.1: Contingency Table with Counts
 

@@ -278,7 +278,7 @@ A good general rule, keep it simple!
 
 2. When you have a continuous variable on the x-axis, you can use the following to adjust the scale:
 
-  scale_x_continuous(limits = c(min, max), breaks = seq(c(min, max, ticks)))
+  scale_x_continuous(limits = c(min, max), breaks = seq(min, max, ticks))
   
   Edit the words min, max, and ticks in the code you see in the previous line. 
   min = minimum value for x-axis
