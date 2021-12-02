@@ -1,5 +1,6 @@
 Data Challenge 1
 ================
+Mr. Adams
 
 -   [Overview](#overview)
 -   [What you will do](#what-you-will-do)
