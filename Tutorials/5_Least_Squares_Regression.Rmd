@@ -1,0 +1,205 @@
+---
+title: "KEY_5_Least_Squares_Regression"
+author: "Mr. Adams"
+output: 
+  github_document:
+    toc: true
+    toc_depth: 3
+---
+
+# Overview
+
+Now that you've built a baseline understanding of least squares regressions, you will learn to build scatter plots and generate linear models here in RStudio.
+
+# Goals
+
+***By the end of this tutorial you should be able to...***
+
+1.  Build a scatter plot that has a linear model.
+
+2.  Generate the equation of the linear model.
+
+3.  Interpret the linear regression model.
+
+4.  Add design elements to the scatter plot to improve the labels, colors, and alpha.
+
+# Libraries
+
+```{r Libraries, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(openintro)
+library(knitr)
+```
+
+# 1: Structured Walk-Through
+
+## 1.1: The Data
+
+We had a great discussion in class about the relationship between gift aid and family income for freshman at Elmhurst College after reading chapter 7 in Introduction to Modern Statistics. Therefore, let's start by recreating the scatter plot and the linear model you saw in the reading.
+
+### 1.1: Tasks and Questions
+
+```{r the data}
+?elmhurst
+glimpse(elmhurst)
+```
+
+#### a. What are the observational units and how many are there?
+
+
+
+#### b. What are the names of the two variables we will explore when answering the question, "Is there an association between family income and the amount of gift aid received?"
+
+
+
+#### c. What is the predictor variable?
+
+
+
+#### d. What is the outcome variable?
+
+
+
+## 1.2: The Plot
+
+You will see in the code below the structure matches the code we used to make other data visualizations. You ask the computer to reference a dataset, make a plot with certain aesthetics, make a certain type of plot, and add labels. 
+
+### 1.2: Tasks and Questions
+
+#### a. Replace NAME_OF_DATASET with the name of the dataset. 
+
+#### b. Replace PREDICTOR and OUTCOME. 
+
+#### c. Change the labels for the x and y axes as well as the title. 
+Be sure to list the units. 
+
+```{r build a scatter plot}
+
+NAME_OF_DATASET %>%
+  ggplot(aes(x = PREDICTOR, y = OUTCOME)) +
+  geom_point() +
+  labs(
+    x = "", 
+    y = "",
+    title =""
+    )
+
+```
+
+## 1.3: The Model
+
+As you know, adding a least squares regression line to the plot and generating an equation allows you to better quantify the association between the two numerical values. You will now do both of those things in the following sections of this tutorial.
+
+### 1.3: Tasks and Questions
+
+#### a. Add the line representing the linear model to scatter plot you just created. To do this, type "lm" after where you see method = in the code chunk below. 
+
+geom_smooth is the function that adds the line and the lm code you added stands for linear model. When you progress to higher levels of statistics and data science, you will add in different types of models while also using geom_smooth. 
+
+```{r add the model}
+elmhurst %>%
+  ggplot(aes(x = family_income, y = gift_aid)) +
+  geom_point() +
+  geom_smooth(method = , se = FALSE) +
+  labs(
+    x = "Family Income of the Student ($1000s)", 
+    y = "Gift Aid ($1000s)",
+    title = "Gift Aid vs Family Income"
+    )
+```
+
+#### b. Generate the intercept and slope of the model by replacing NAME_OF_DATASET, PREDICTOR, and OUTCOME in the code chunk below. 
+
+#### c. Write the equation. 
+
+
+
+```{r intercept slope}
+lm(data = NAME_OF_DATASET, formula = OUTCOME~PREDICTOR)
+```
+
+#### d. Using what you learned during the correlation tutorial, find the mean and standard deviation of each variable along with the correlation coefficient. 
+
+```{r correlation}
+elmhurst %>%
+  summarise(
+    mean_income = mean(), 
+    sd_income = sd(), 
+    mean_aid = mean(), 
+    sd_aid = sd(),
+    r = cor()
+  )
+```
+## 1.4: Interpreting the Model
+
+Getting the numbers is only part of the battle. Interpreting the model properly and then clearly communicating that to others is essential. You will now practice doing just that. 
+
+### 1.4: Tasks and Questions
+
+#### a. Use the slope coefficient to describe the direction of the association. 
+
+
+
+#### b. Use the correlation coefficient to describe the strength of the association.
+
+
+
+#### c. If a family income of an incoming freshman student was $125,000, how much gift aid would the model predict they'd receive. USE THE EQUATION to find this. DO NOT JUST LOOK AT THE SCATTER PLOT!! Remember r can be used as calculator. 
+
+
+
+```{r make a prediction}
+# find slope in thousands
+
+# Make prediction
+
+
+```
+
+
+# 2: Build Your Own Scatter Plot and Model
+
+The Question you will explore is: "Are textbooks at UCLA's bookstore overpriced in relation to the same ones sold on Amazon?"
+This section is modeled after a tutorial developed in Introduction to Modern Statistics. 
+
+***Everything you do below is something you did above. Therefore, copy and paste is your friend***
+
+## 2.1: Learn about the Data
+
+```{r textbook data}
+?textbooks
+```
+
+## 2.2: Build the scatter plot with the linear model included
+
+Before you dive into the coding, you may want to draw a quick sketch of the plot you want to create so you know which variables go on which axis.  You Can do this on paper, your iPad, or the board. Tip: Amazon_new will be the predictor variable. 
+
+```{r textbook viz}
+
+```
+
+## 2.3: Generate the equation of the least squares regression line. 
+
+```{r the equation}
+
+```
+
+
+## 2.4: Generate the correlation coefficient
+
+```{r cor}
+textbooks %>%
+  summarise(
+    r = cor(OUTCOME, PREDICTOR)
+  )
+```
+
+
+## 2.5: Using what you just calculated, describe the relationship between prices of textbooks on Amazon and the UCLA book store. In your answer you should reference the slope and the correlation. 
+
+
+
+## Sources: 
+
+https://openintro-ims.netlify.app/model-slr.html
+https://openintro.shinyapps.io/ims-03-model-04/#section-data-set-up
