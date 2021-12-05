@@ -1,5 +1,5 @@
 ---
-title: "KEY_5_Least_Squares_Regression"
+title: "5_Least_Squares_Regression"
 author: "Mr. Adams"
 output: 
   github_document:
